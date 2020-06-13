@@ -1,21 +1,25 @@
 form{
-    margin-left: 2%;
     display: inline;
 }
 
-.hello{
+/* .hello{
     margin-left: 2em;
-}
+} */
 .split {
     height: 100%;
     width: 50%;
     position: fixed;
     z-index: 1;
-    top: 20%;
+    top: 38%;
     overflow-x: hidden;
     padding-top: 20px;
   }
-  
+  input{
+      margin: 2px;
+  }
+  .abc{
+      margin-left: 2%;
+  }
   /* Control the left side */
   .left {
     left: 0;
@@ -23,6 +27,8 @@ form{
   
   /* Control the right side */
   .right {
+text-align: center;
+    margin-right: 10%;
     right: 0;
   }
   

@@ -11,12 +11,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./assignment.component.css']
 })
 export class AssignmentComponent implements OnInit {
-    form = new FormGroup ({
-      topics: new FormArray([])
-    });
+   
+  
     query = '';
     assignments= ASSIGNMENT;
-    
+    addNew(name: HTMLInputElement,description:HTMLInputElement){
+      const asd={
+        name:name.value,
+        description:description.value
+      }
+      this.assignments.push(asd);
+      console.log(this.assignment);
+     
+    }
     selectedAssignment = {};
     filterAssignment = ASSIGNMENT;
    
@@ -45,10 +52,10 @@ constructor(private router: Router, private activatedRoute: ActivatedRoute) {
       })
       
     } 
-    addTopic(topic: HTMLInputElement){
-       this.topics.push(new FormControl(topic.value));
-    }
-    get topics(){
-      return this.form.get('topics') as FormArray;
-    }
+    // addTopic(topic: HTMLInputElement){
+    //    this.topics.push(new FormControl(topic.value));
+    // }
+    // get topics(){
+    //   return this.form.get('topics') as FormArray;
+    // }
 }

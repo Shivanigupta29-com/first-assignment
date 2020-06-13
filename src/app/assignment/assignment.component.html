@@ -4,16 +4,20 @@
 	<label for="search">Search: </label>
 		<input name="search" [(ngModel)]="query" (change)="onSearch(query)" />
 	
-
-	<form>
-		<label for="addcomponent">Add: </label>
-		<input name="addcomponent" type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic> 
+<h4>Add a new Component</h4>
+	<form onkeydown="return event.key != 'Enter';">
+		<label for="cname">Name: </label>
+		<input name="cname" type="text" class="form-control" #name>
+		<label class="abc" for="description">Description: </label> 
+		<input  name="description" type="text" class="form-control" #description> 
 		
-	<ul class="list-group">
+		<button (click)="addNew(name,description)">Add</button>
+		
+	<!-- <ul class="list-group">
 		<li *ngFor="let topic of topics.controls" class="list-group-item">
 			{{topic.value}}
 		</li>
-	</ul>
+	</ul> -->
 </form>
 </div>
 
@@ -23,12 +27,16 @@
 	<li *ngFor="let assignment of filterAssignment" [class.selected]="assignment === selectedAssignment"
 		(click)="onSelect(assignment)">
 		<span class="badge">{{assignment.name}}</span>
+		</li>
 		
 </ul>
 
 
 
 </div>
-<div class="split right">{{selectedAssignment.description}}</div>
 
+<div class="split right">
+	<div class="jumbotron">{{selectedAssignment['description']}}</div>
+	
+</div>
 
