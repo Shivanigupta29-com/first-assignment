@@ -1,0 +1,12 @@
+<!-- <button type="button" class="btn btn-success" (click) = "toggle()"> Display Details </button>
+<p *ngIf = "show"> Hello i am here </p>
+<div *ngFor = "let practiceArray of practiceArrays; let i=index"
+[ngStyle] = "{backgroundColor : i >=4 ? 'blue' : 'transparent'}"
+[ngClass] = "{'white-text': i >=4}">
+    {{practiceArray}} -->
+    <p> {{post.title}} </p>
+
+    <app-favourite [isFavorite]="post.isFavorite"> 
+        {{post.title}} </app-favourite>
+<!-- </div> -->
+
