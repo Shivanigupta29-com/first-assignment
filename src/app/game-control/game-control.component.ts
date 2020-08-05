@@ -20,6 +20,8 @@ export class GameControlComponent implements OnInit {
       this.intervalFired.emit(this.lastnumber + 1);
       this.lastnumber++;
       console.log(this.lastnumber);
+      console.log("hello");
+      console.log("hii");
     },1000)
   }
 
